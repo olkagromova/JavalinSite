@@ -1,0 +1,20 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+    "-//Hibernate/Hibernate Configuration DTD//EN"
+    "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+  <session-factory>
+    <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+    <property name="connection.url">jdbc:mysql://server222.hosting.reg.ru/u0613437_easyit?useUnicode=true&amp;useJDBCCompliantTimezoneShift=true&amp;useLegacyDatetimeCode=false&amp;serverTimezone=UTC</property>
+    <property name="connection.driver_class">com.mysql.jdbc.Driver</property>
+
+    <!-- NOTE that after automapping with IDEA property username and password will delete -->
+    <!--and will be:  Initial SessionFactory failedorg.hibernate.service.spi.ServiceException: Unable to create requested service-->
+    <property name="connection.username">u0613437_easyit</property>
+    <property name="connection.password">Test1234</property>
+    <!-- NOTE that after automapping with IDEA property username and password will delete -->
+    <mapping class="org.example.UserTable"/>
+    <!-- DB schema will be updated if needed -->
+    <!-- <property name="hbm2ddl.auto">update</property> -->
+  </session-factory>
+</hibernate-configuration>
